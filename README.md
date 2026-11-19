@@ -35,7 +35,7 @@ You can add the provided votv module for Home Manager as follows:
 
 ```nix
 imports = [
-    inputs.zen-browser.homeModules.votv
+    inputs.votv.homeModules.votv
 ];
 
 programs.votv = {
