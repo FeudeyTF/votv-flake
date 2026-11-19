@@ -61,6 +61,9 @@ $ sudo nixos-rebuild switch # or home-manager switch
 
 ```sh
 votv
+
+votv --setup # Reinstall Wine prefix
+votv --reset # Delete Wine prifix
 ```
 
 ## Troubleshooting
