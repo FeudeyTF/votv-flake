@@ -2,7 +2,7 @@
 
 This flake provides Voices of the Void package and options for it
 
-# Installation
+## Installation
 
 Add flake as inputs to your `flake.nix`:
 
@@ -18,9 +18,9 @@ inputs = {
 }
 ```
 
-# Integration
+## Integration
 
-## I just want to play, give me that package already
+### I just want to play, give me that package already
 
 Simply add the following to your `environment.systemPackages` or `home.packages`:
 
@@ -29,7 +29,7 @@ inputs.votv.packages."${pkgs.stdenv.hostPlatform.system}".default # votv
 inputs.votv.packages."${pkgs.stdenv.hostPlatform.system}".votv
 ```
 
-## Home Manager
+### Home Manager
 
 You can add the provided votv module for Home Manager as follows:
 
@@ -48,13 +48,13 @@ programs.votv = {
 };
 ```
 
-## Build your configuration:
+### Build your configuration:
 
 ```sh
 $ sudo nixos-rebuild switch # or home-manager switch
 ```
 
-## Start the game
+### Start the game
 
 > [!NOTE]
 > On the first launch, the launcher will install all necessary dependencies in `.local/share/votv`, and then launch the game. It will take some time
@@ -63,9 +63,9 @@ $ sudo nixos-rebuild switch # or home-manager switch
 votv
 ```
 
-# Troubleshooting
+## Troubleshooting
 
-## I have both integrated and discrete graphics, but only the integrated one works when I launch the game
+### I have both integrated and discrete graphics, but only the integrated one works when I launch the game
 
 Make sure the drivers for your discrete graphics card are installed and the system can detect it. If not - https://wiki.nixos.org/wiki/Graphics
 
@@ -83,11 +83,11 @@ DXVK_FILTER_DEVICE_NAME = "Your GPU's name. For example, NVIDIA GeForce GTX 1050
 VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/<name, check the Internet>.json";
 ```
 
-# Contributing
+## Contributing
 
 Feel free to contribute!
 
-# License
+## License
 
 Project code is licensed by the license in the LICENSE file.
 
